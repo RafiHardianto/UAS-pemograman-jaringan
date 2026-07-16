@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Streaming (UDP){% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Streaming Video via UDP</h2>
+  <p class="hint">Klik "Mulai Streaming" untuk memicu pengiriman video lewat socket UDP di port 6001.</p>
+  <button onclick="startStream()">Mulai Streaming</button>
+
+  <div class="video-box">
+    <img id="videoFeed" src="" alt="Video akan tampil di sini setelah streaming dimulai">
+  </div>
+</div>
+
+<script>
+function startStream() {
+  fetch("{{ url_for('stream_start') }}").then(() => {
+    document.getElementById('videoFeed').src = "{{ url_for('video_feed') }}?" + Date.now();
+  });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Registrasi{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Buat Akun</h2>
+  <form method="POST">
+    <label>Username</label>
+    <input type="text" name="username" required>
+    <label>Email</label>
+    <input type="email" name="email" required>
+    <label>Password</label>
+    <input type="password" name="password" required>
+    <button type="submit">Daftar</button>
+  </form>
+  <p class="switch">Sudah punya akun? <a href="{{ url_for('login') }}">Login</a></p>
+</div>
+{% endblock %}

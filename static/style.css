@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+.brand { font-weight: 700; font-size: 1.2rem; color: #38bdf8; }
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: #38bdf8; }
+
+.container {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 32px;
+}
+h2 { margin-top: 0; }
+label { display: block; margin: 14px 0 6px; font-size: 0.9rem; color: #94a3b8; }
+input[type=text], input[type=email], input[type=password], input[type=file] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: #0ea5e9; }
+
+.switch { margin-top: 18px; font-size: 0.9rem; color: #94a3b8; }
+.switch a { color: #38bdf8; }
+
+.flash {
+  background: #334155;
+  border-left: 4px solid #38bdf8;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.hint { color: #94a3b8; font-size: 0.9rem; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.menu-item {
+  display: block;
+  padding: 20px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #e2e8f0;
+}
+.menu-item:hover { border-color: #38bdf8; }
+.menu-item h3 { margin: 0 0 6px; color: #38bdf8; }
+.menu-item p { margin: 0; font-size: 0.85rem; color: #94a3b8; }
+
+.file-list { padding-left: 20px; }
+.file-list li { margin-bottom: 6px; font-size: 0.9rem; }
+
+.video-box {
+  margin-top: 20px;
+  background: #000;
+  border-radius: 8px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-box img { max-width: 100%; border-radius: 8px; }
+
+@media (max-width: 600px) {
+  .menu-grid { grid-template-columns: 1fr; }
+  .navbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>Selamat datang, {{ username }} 👋</h2>
+  <p>Akun Anda sudah terverifikasi. Silakan pilih fitur di bawah ini:</p>
+  <div class="menu-grid">
+    <a class="menu-item" href="{{ url_for('upload') }}">
+      <h3>Upload File</h3>
+      <p>Kirim file ke server menggunakan protokol TCP</p>
+    </a>
+    <a class="menu-item" href="{{ url_for('stream') }}">
+      <h3>Streaming Video</h3>
+      <p>Tonton video yang dikirim menggunakan protokol UDP</p>
+    </a>
+  </div>
+</div>
+{% endblock %}
